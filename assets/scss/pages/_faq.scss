@@ -1,0 +1,37 @@
+.faq_subtitle {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+  margin-top: 32px;
+}
+
+.glass_question_block {
+	color: #000;
+	margin-top: 32px;
+	&:first-of-type {
+		margin-top: 24px;
+	}
+	&:last-of-type {
+		margin-bottom: 80px;
+	}
+  .glass_question_title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .glass_question_answer {
+    font-size: 16px;
+		margin-top: 8px;
+  }
+}
+
+@include mobile {
+	.faq_subtitle {
+		margin-top: 24px;
+	}
+	.glass_question_block {
+		margin-top: 24px;
+		&:last-of-type {
+			margin-bottom: 64px;
+		}
+	}
+}
