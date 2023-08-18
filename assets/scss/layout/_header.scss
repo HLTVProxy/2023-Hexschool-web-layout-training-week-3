@@ -1,5 +1,5 @@
 .header {
-  background-color: #aa0601;
+  background-color: $primary;
   img {
     width: 80px;
     height: 49px;
@@ -12,35 +12,46 @@
     padding-bottom: 12px;
     .header-nav-bar {
       display: flex;
-      li a {
+      a {
         color: #fff;
         font-size: 20px;
         margin-left: 64px;
       }
     }
   }
+  .mobile-header-nav-bar {
+    display: none;
+  }
 }
 
-@media screen and (max-width: 767px) {
+@include mobile {
   .header {
     .container {
       flex-direction: column;
       align-items: flex-start;
       .header-nav-bar {
-        width: 100%;
-        flex-wrap: wrap;
-        margin-top: 16px;
-        li {
-          display: flex;
-          justify-content: center;
-          width: 50%;
-          border: 1px solid #fff;
-          a {
-            margin: 0;
-            padding: 12px 64px;
-          }
+        display: none;
+      }
+    }
+    .mobile-header-nav-bar {
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+      margin-top: 16px;
+      li {
+        display: flex;
+        justify-content: center;
+        width: 50%;
+        border: 1px solid #fff;
+        a {
+          display: block;
+          color: #fff;
+          margin: 0;
+          padding: 12px 64px;
         }
       }
+      padding-left: -12px;
+      padding-right: -12px;
     }
   }
 }
